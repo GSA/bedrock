@@ -1,0 +1,31 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+    environment:
+      AUTH_KEY: testauthkey
+      AUTH_SALT: authsalt
+      DB_HOST: db
+      DB_NAME: wp
+      DB_PASSWORD: wp
+      DB_USER: wp
+      LOGGED_IN_KEY: loggedinkey
+      NONCE_KEY: noncekey
+      NONCE_SALT: noncesalt
+      SECRET_AUTH_KEY: secrettestauthkey
+      SECURE_AUTH_SALT: secureauthsalt
+      WP_ENV: development
+  db:
+    environment:
+      MYSQL_ROOT_PASSWORD: secretpassword
+      MYSQL_DATABASE: wp
+      MYSQL_USER: wp
+      MYSQL_PASSWORD: wp
+    expose:
+      - 3306
+    image: mysql:latest
+    volumes:
+      - db:/var/lib/mysql
+volumes:
+  db:
