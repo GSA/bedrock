@@ -6,11 +6,10 @@ services:
       dockerfile: docker/app/Dockerfile
     depends_on:
       - db
-      - nginx
     environment:
       WP_ENV: development
       WP_HOME: http://localhost:8000
-      WP_SITEURL: http://localhost:8000
+      WP_SITEURL: http://localhost:8000/wp
       DB_NAME: datagov
       DB_USER: root
       DB_PASSWORD: mysql-dev-password
@@ -34,6 +33,8 @@ services:
       dockerfile: docker/nginx/Dockerfile
     ports:
       - "8000:80"
+    depends_on:
+      - app
 
 volumes:
   db:
