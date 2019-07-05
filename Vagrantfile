@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "ubuntu/bionic64"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -64,15 +64,47 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
+    # add ondrej/php repository for updated PHP versions
     add-apt-repository ppa:ondrej/php
+
+    # install os dependencies
     apt-get update
     apt-get install -y \
       git \
+      mysql-server \
+      nginx \
+      php7.0-cli \
       php7.0-dom \
-      php7.0-simplexml \
+      php7.0-fpm \
       php7.0-mbstring \
-      php7.0-cli
+      php7.0-mysql \
+      php7.0-simplexml \
+      subversion \
+      unzip
 
-    mkdir -p /home/vagrant/.local/bin
+    # install composer
+    # https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md
+    EXPECTED_SIGNATURE="$(wget -q -O - https://composer.github.io/installer.sig)"
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    ACTUAL_SIGNATURE="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"
+    if [ "$EXPECTED_SIGNATURE" != "$ACTUAL_SIGNATURE" ]
+    then
+        >&2 echo 'ERROR: Invalid installer signature'
+        rm composer-setup.php
+        exit 1
+    fi
+    php composer-setup.php --quiet
+    rm composer-setup.php
+    mv composer.phar /usr/local/bin/composer
+    chmod +x /usr/local/bin/composer
+
+    # symlink www to app code
+    rm -rf /var/www
+    ln -s /vagrant /var/www
+
+    # install nginx configuration
+    rm /etc/nginx/sites-enabled/default
+    cp /vagrant/vagrant/nginx.conf /etc/nginx/sites-enabled/wordpress.conf
+    service nginx reload
   SHELL
 end

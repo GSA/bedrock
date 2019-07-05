@@ -17,3 +17,16 @@ Then running `composer update` will pull down the new version.
 ### Community
 
 Most of Data.gov discussions happen at [Data.gov github](https://github.com/gsa/data.gov/issues)
+
+
+## Development
+
+### Prerequisites
+
+
+Use [Vagrant](https://www.vagrantup.com/) to create a local development
+environment.
+
+    $ vagrant up
+
+Once the virtual machine is created,
