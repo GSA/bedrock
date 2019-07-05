@@ -8,11 +8,6 @@ Bedrock is a modern WordPress stack that helps you get started with the best dev
 
 Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](http://12factor.net/) methodology including the [WordPress specific version](https://roots.io/twelve-factor-wordpress/).
 
-## Updating WP and plugin versions
-
-Updating your WordPress version (or any plugin) is just a matter of changing the version number in the `composer.json` file.
-
-Then running `composer update` will pull down the new version.
 
 ## Community
 
@@ -43,3 +38,19 @@ Activate all the installed plugins and theme.
     $ docker-compose exec app wp theme activate roots-nextdatagov --allow-root
 
 Open your browser to [localhost:8000](http://localhost:8000/).
+
+
+### Updating WP and plugin versions
+
+Updating your WordPress version (or any plugin) is just a matter of changing the version number in the `composer.json` file.
+
+Then running `composer update` will pull down the new version. Run
+docker-compose in "local" mode so changes persist to your local filesystem.
+
+    $ docker-compose -f docker-compose.yml -f docker-compose.local.yml run --rm app composer update
+
+Rebuild the docker images with updated dependencies.
+
+    $ docker-compose build
+
+Commit the updated `composer.json` and `composer.lock` to version control.
