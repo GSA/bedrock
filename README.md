@@ -26,30 +26,27 @@ Most of Data.gov discussions happen at [Data.gov github](https://github.com/gsa/
 - [Docker](https://docs.docker.com/install/) v18+
 - [Docker Compose](https://docs.docker.com/compose/) v1.24+
 
+
 ### Setup
 
 Build the docker containers.
 
-    $ docker-compose build
+    $ make build
 
-Run the docker containers.
+Configure WordPress by installing the composer dependencies, installing
+WordPress, and configuring plugins and theme.
 
-    $ docker-compose up
-
-Install composer dependencies.
-
-    $ docker-compose exec app composer install
-
-Activate all the installed plugins and theme.
-
-    $ docker-compose exec app wp core install --url=http://localhost:8000 \
-      --title=Data.gov --admin_user=admin --admin_email=admin@example.com --allow-root
-    $ docker-compose exec app wp plugin activate --all --allow-root
-    $ docker-compose exec app wp theme activate roots-nextdatagov --allow-root
+    $ make configure
 
 Open your browser to [localhost:8000](http://localhost:8000/).
 
 _TODO: initialize the database with seed data so the theme loads properly._
+
+Once the containers are setup, you can just bring up the containers without
+running `make setup` each time.
+
+    $ make up
+
 
 ### Restoring database dumps
 
@@ -62,3 +59,14 @@ environment.
 
     $ docker-compose exec -T db mysql -u root -pmysql-dev-password datagov \
       < <(gzip --to-stdout --decompress databasedump.sql.gz)
+
+
+### Tests
+
+Make sure the app is setup and WordPress is installed.
+
+    $ make setup
+
+Then you can run the integration tests.
+
+    $ make test
