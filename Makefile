@@ -7,7 +7,8 @@ clean:
 	docker-compose down -v
 
 configure:
-	docker-compose up --detach
+	#docker-compose up --detach # Docker Compose on CI does not support --detach
+	docker-compose up &
 	docker-compose exec app composer install
 	docker-compose exec app wp core install --url=http://localhost:8000 --title=Data.gov --admin_user=admin --admin_email=admin@example.com --allow-root
 	docker-compose exec app wp plugin activate --all --allow-root
