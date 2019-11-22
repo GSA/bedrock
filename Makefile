@@ -1,7 +1,10 @@
-.PHONY: build configure test up
+.PHONY: build clean configure test up
 
 build:
 	docker-compose build
+
+clean:
+	docker-compose down -v
 
 configure:
 	docker-compose up --detach

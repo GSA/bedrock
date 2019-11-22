@@ -47,6 +47,10 @@ running `make setup` each time.
 
     $ make up
 
+If you need to start from a clean state, remove any containers and volumes.
+
+    $ make clean
+
 
 ### Restoring database dumps
 
