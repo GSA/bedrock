@@ -7,12 +7,11 @@ clean:
 	docker-compose down -v
 
 configure:
-	#docker-compose up --detach # Docker Compose on CI does not support --detach
-	docker-compose up &
-	docker-compose exec app composer install
-	docker-compose exec app wp core install --url=http://localhost:8000 --title=Data.gov --admin_user=admin --admin_email=admin@example.com --allow-root
-	docker-compose exec app wp plugin activate --all --allow-root
-	docker-compose exec app wp theme activate roots-nextdatagov --allow-root
+	docker-compose up --no-start
+	docker-compose run --rm app composer install --no-dev
+	docker-compose run --rm app wp core install --url=http://localhost:8000 --title=Data.gov --admin_user=admin --admin_email=admin@example.com --allow-root
+	docker-compose run --rm app wp plugin activate --all --allow-root
+	docker-compose run --rm app wp theme activate roots-nextdatagov --allow-root
 
 test:
 	docker-compose -f docker-compose.yml -f docker-compose.test.yml build test

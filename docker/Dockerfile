@@ -23,12 +23,13 @@ RUN /tmp/install-composer.sh
 RUN composer global require wp-cli/wp-cli-bundle \
   && ln -s ~/.composer/vendor/bin/wp /usr/local/bin/wp
 
+WORKDIR $WWW_DIR
+
+# Copy the app code into the container
+COPY ./ $WWW_DIR/
+
 # Install php dependencies
-COPY composer.json $WWW_DIR
-COPY composer.lock $WWW_DIR
 # Use COMPOSER_PROCESS_TIMEOUT to avoid timing out on the slow subversion
 # checkout for outdated packages. See
 # https://github.com/GSA/datagov-deploy/issues/612#issuecomment-508871678
-RUN cd $WWW_DIR && COMPOSER_PROCESS_TIMEOUT=600 composer install --no-dev
-
-WORKDIR $WWW_DIR
+RUN COMPOSER_PROCESS_TIMEOUT=600 composer install --no-dev

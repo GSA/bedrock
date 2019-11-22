@@ -2,9 +2,11 @@
 version: 2
 jobs:
   build:
-    machine: true
+    docker:
+      - image: circleci/php
     steps:
       - checkout
+      - setup_remote_docker
       - run: make build
       - run: make configure
       - run: make test
