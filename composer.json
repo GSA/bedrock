@@ -45,7 +45,7 @@
     "gsa/bwp-external-links": "dev-master",
     "gsa/custom-permalinks": "dev-master",
     "gsa/custom-post-view-generator": "dev-master",
-    "gsa/data.gov": "dev-master",
+    "gsa/data.gov": "977.x-dev",
     "gsa/datagov-custom": "dev-master",
     "gsa/inactive-logout": "dev-master",
     "gsa/metric-count": "dev-master",
