@@ -96,7 +96,7 @@ define('WP_DEFAULT_EMAIL_FROM', env('WP_DEFAULT_EMAIL_FROM'));
  * Custom Settings
  */
 define('AUTOMATIC_UPDATER_DISABLED', true);
-define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: true);
+define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
 define('DISALLOW_FILE_EDIT', true);
 
 /**
