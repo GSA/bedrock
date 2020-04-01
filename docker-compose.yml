@@ -13,6 +13,7 @@ services:
       DB_HOST: db
       WP_CONTENT_PROTOCOL: http
       WP_ENV: development
+      DISABLE_WP_CRON: "False"
 
       # Development non-secrets
       AUTH_KEY: test-auth-key
