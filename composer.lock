@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1541e43be4512cba4e4f0a502af3bfd5",
+    "content-hash": "769018d6a8b3a7460360dfe7f2115cef",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.147.13",
+            "version": "3.148.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "e3354b0aedea5f2b0e22e6932cc9e65d98657836"
+                "reference": "d3a076ac381150d92661890af0d906477f225295"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e3354b0aedea5f2b0e22e6932cc9e65d98657836",
-                "reference": "e3354b0aedea5f2b0e22e6932cc9e65d98657836",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d3a076ac381150d92661890af0d906477f225295",
+                "reference": "d3a076ac381150d92661890af0d906477f225295",
                 "shasum": ""
             },
             "require": {
@@ -89,7 +89,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-08-05T18:16:36+00:00"
+            "time": "2020-08-07T22:16:51+00:00"
         },
         {
             "name": "composer/installers",
@@ -281,14 +281,14 @@
         },
         {
             "name": "gsa/data.gov",
-            "version": "dev-feature/older-icon",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GSA/data.gov",
-                "reference": "f2afb3bb5b6342a498e31f0c067a380ad2facdc4"
+                "reference": "ac7b4ac84d48ba50852715f5613fb406f9502103"
             },
             "type": "wordpress-theme",
-            "time": "2020-08-05T18:54:11+00:00"
+            "time": "2020-08-10T15:04:26+00:00"
         },
         {
             "name": "gsa/datagov-custom",
@@ -1489,15 +1489,15 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "5.8.12",
+            "version": "5.8.13",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/5.8.12"
+                "reference": "tags/5.8.13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.8.12.zip"
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.8.13.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -3267,16 +3267,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.5",
+            "version": "3.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "73e2e7f57d958e7228fce50dc0c61f58f017f9f6"
+                "reference": "e97627871a7eab2f70e59166072a6b767d5834e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/73e2e7f57d958e7228fce50dc0c61f58f017f9f6",
-                "reference": "73e2e7f57d958e7228fce50dc0c61f58f017f9f6",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/e97627871a7eab2f70e59166072a6b767d5834e0",
+                "reference": "e97627871a7eab2f70e59166072a6b767d5834e0",
                 "shasum": ""
             },
             "require": {
@@ -3314,7 +3314,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2020-04-17T01:09:41+00:00"
+            "time": "2020-08-10T04:50:15+00:00"
         },
         {
             "name": "theseer/tokenizer",
