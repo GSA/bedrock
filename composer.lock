@@ -275,10 +275,11 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GSA/data.gov",
-                "reference": "c5bdd7c4f31956cd35c5ea57a89f7b5aebc8f94c"
+                "reference": "f4bc48e341921a1e321db30343b65bd53ac5f040"
             },
+            "default-branch": true,
             "type": "wordpress-theme",
-            "time": "2020-10-26T20:38:18+00:00"
+            "time": "2020-12-16T15:15:55+00:00"
         },
         {
             "name": "gsa/datagov-custom",
@@ -3422,5 +3423,6 @@
     "platform": {
         "php": ">=7.3"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }
