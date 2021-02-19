@@ -32,15 +32,15 @@ Build the docker containers.
 
     $ make build
 
-Run the docker containers.
-
-    $ make up
-
 Activate all the installed plugins and theme.
 
     $ make setup
 
 The admin password is in the output of the above command.
+
+Run the docker containers.
+
+    $ make up
 
 Open your browser to [localhost:8000](http://localhost:8000/).
 

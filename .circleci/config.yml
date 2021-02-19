@@ -7,10 +7,15 @@ jobs:
       - checkout
       - run:
           name: Build the application image
-          command: make build
+          command: make build setup
       - run:
           name: Start the application
           command: make up
+      - run:
+          name: Test
+          command: |
+            sleep 5
+            make test
       - run:
           name: Clean running application
           command: docker-compose down -v
