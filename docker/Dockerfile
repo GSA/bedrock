@@ -19,10 +19,6 @@ RUN docker-php-ext-install mysqli
 COPY docker/install-composer.sh /tmp/
 RUN /tmp/install-composer.sh
 
-# Install wp cli
-RUN composer global require wp-cli/wp-cli-bundle \
-  && ln -s ~/.composer/vendor/bin/wp /usr/local/bin/wp
-
 # Install php dependencies
 COPY composer.json $WWW_DIR
 COPY composer.lock $WWW_DIR

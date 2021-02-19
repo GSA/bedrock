@@ -14,6 +14,7 @@
     "oscarotero/env": "^1.0",
     "symfony/yaml": "^3.4.13",
     "phpdocumentor/reflection-common": "^1.0.1",
+    "wp-cli/wp-cli-bundle": "*",
     "wpackagist-plugin/advanced-custom-fields": "*",
     "wpackagist-plugin/akismet": "*",
     "wpackagist-plugin/amazon-s3-and-cloudfront": "*",
@@ -30,7 +31,6 @@
     "wpackagist-plugin/google-analyticator": "*",
     "wpackagist-plugin/m-wp-popup": "*",
     "wpackagist-plugin/no-category-base-wpml": "*",
-    "wpackagist-plugin/plugin-vulnerabilities": "*",
     "wpackagist-plugin/posts-in-page": "*",
     "wpackagist-plugin/redirection": "*",
     "wpackagist-plugin/si-captcha-for-wordpress": "*",
@@ -220,6 +220,14 @@
       ]
     },
     "wordpress-install-dir": "web/wp"
+  },
+  "scripts" : {
+    "post-install-cmd" : [
+        "/bin/bash -c \"[[ -f /usr/bin/wp ]] || ln -s /var/www/vendor/wp-cli/wp-cli/bin/wp /usr/bin/wp\"",
+        "/bin/bash -c \"source /var/www/vendor/wp-cli/wp-cli/utils/wp-completion.bash\"",
+        "/bin/bash -c \"[[ -f ~/.bash_profile ]] || touch ~/.bash_profile\"",
+        "/bin/bash -c \"source ~/.bash_profile\""
+    ]
   },
   "config": {
     "preferred-install": "dist"
