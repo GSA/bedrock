@@ -1,0 +1,22 @@
+---
+name: commit
+
+on:
+  push:
+
+
+jobs:
+  build:
+    name: buid_and_test
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: build_and_setup
+        run: make build setup
+      - name: up
+        run: make up
+      - name: test
+        run: |
+          sleep 5
+          make test
