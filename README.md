@@ -70,6 +70,10 @@ environment.
     $ docker-compose exec -T db mysql -u root -pmysql-dev-password datagov \
       < <(gzip --to-stdout --decompress databasedump.sql.gz)
 
+### Wordpress CLI
+
+Wordpress cli is installed [via composer](https://make.wordpress.org/cli/handbook/guides/installing/#installing-via-composer)
+
 ## Admin dashboard
 
 In order to access the admin dashboard for development, you must first disable
@@ -86,3 +90,21 @@ Reset the admin password to `password`.
 Open the login page
 [localhost:8000/wp/wp-login.php](http://localhost:8000/wp/wp-login.php). Login
 with the user `admin` password `password`.
+
+## Deployment
+
+In order to deploy to cloud.gov, the following will need to be setup.
+
+Copy `vars.yml.template` to `vars.yml`, and customize the values in that file. Then, assuming you're logged in for the Cloud Foundry CLI:
+
+_For ease of use, you might want to run `export app_name=wordpress`, instead of editing all the next commands._
+
+Create the database used by wordpress.
+
+    $ cf create-service aws-rds small-mysql ${app_name}-db
+
+You have to wait a bit for the DB to be available (see [the cloud.gov instructions on how to know when it's up](https://cloud.gov/docs/services/relational-database/#instance-creation-time)).
+
+Create the s3 bucket for data storage.
+
+    $ cf create-service s3 basic-sandbox ${app_name}-s3

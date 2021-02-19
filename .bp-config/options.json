@@ -1,0 +1,13 @@
+{
+    "WEBDIR": "web",
+    "PHP_EXTENSIONS": [
+        "mysqli",
+        "openssl",
+        "mbstring",
+        "gd",
+        "zip",
+        "curl",
+        "sockets",
+        "zlib"
+    ]
+}
