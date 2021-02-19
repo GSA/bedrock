@@ -10,6 +10,7 @@ clean:
 
 setup:
 	docker-compose run --rm app composer install --no-dev
+	sleep 5
 	docker-compose run --rm app wp core install --url=http://localhost:8000 --title=Data.gov --admin_user=admin --admin_email=admin@example.com --allow-root
 	docker-compose run --rm app wp plugin activate --all --allow-root
 	docker-compose run --rm app wp theme activate roots-nextdatagov --allow-root
