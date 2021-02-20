@@ -108,3 +108,17 @@ You have to wait a bit for the DB to be available (see [the cloud.gov instructio
 Create the s3 bucket for data storage.
 
     $ cf create-service s3 basic-sandbox ${app_name}-s3
+
+Create the secrets service that will contain various necessary environment secrets
+
+    $ cf cups ${app_name}-secrets -p "AUTH_KEY, SECURE_AUTH_KEY, LOGGED_IN_KEY, NONCE_KEY, AUTH_SALT, SECURE_AUTH_SALT, LOGGED_IN_SALT, NONCE_SALT"
+
+_Note if you need to update the secrets, please see our [wiki](https://github.com/GSA/datagov-deploy/wiki/Cloud.gov-Cheat-Sheet#secrets-management)
+
+Once these are created, start up the app:
+
+    $ cf push --vars-file vars.yml
+
+You will then need to initialize the install:
+    $ cf run-task ${app_name} "wp core install --title=Data.gov --admin_user=admin --admin_email=admin@example.com --url=<(echo $VCAP_APPLICATION | jq -r '.uris[0]') && wp plugin activate --all && wp theme activate roots-nextdatagov
+    
