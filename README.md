@@ -109,7 +109,7 @@ Create the s3 bucket for data storage.
 
     $ cf create-service s3 basic-sandbox ${app_name}-s3
 
-Create the secrets service that will contain various necessary environment secrets
+Create the secrets service that will contain various necessary environment secrets (create new ones for a new environment [here](Generate your keys here: https://roots.io/salts.html))
 
     $ cf cups ${app_name}-secrets -p "AUTH_KEY, SECURE_AUTH_KEY, LOGGED_IN_KEY, NONCE_KEY, AUTH_SALT, SECURE_AUTH_SALT, LOGGED_IN_SALT, NONCE_SALT"
 
@@ -117,8 +117,8 @@ _Note if you need to update the secrets, please see our [wiki](https://github.co
 
 Once these are created, start up the app:
 
-    $ cf push --vars-file vars.yml
+    $ cf push --vars-file vars.yml ${app_name}
 
 You will then need to initialize the install:
-    $ cf run-task ${app_name} "wp core install --title=Data.gov --admin_user=admin --admin_email=admin@example.com --url=<(echo $VCAP_APPLICATION | jq -r '.uris[0]') && wp plugin activate --all && wp theme activate roots-nextdatagov
+    $ cf run-task ${app_name} --command "wp core install --title=Data.gov --admin_user=admin --admin_email=admin@example.com --url=<(echo $VCAP_APPLICATION | jq -r '.uris[0]') && wp plugin activate --all && wp theme activate roots-nextdatagov" --name wordpress-init
     

@@ -1,0 +1,4 @@
+app_name: wordpress
+
+routes:
+  - route: wordpress-stage-datagov.app.cloud.gov
