@@ -81,11 +81,11 @@ saml and update the admin password.
 
 First, deactivate the saml plugin.
 
-    $ docker-compose exec app wp --allow-root plugin deactivate saml-20-single-sign-on
+    $ docker-compose exec app /var/www/lib/vendor/wp-cli/wp-cli/bin/wp --allow-root plugin deactivate saml-20-single-sign-on
 
 Reset the admin password to `password`.
 
-    $ docker-compose run --rm app wp --allow-root user update admin --user_pass=password
+    $ docker-compose run --rm app /var/www/lib/vendor/wp-cli/wp-cli/bin/wp --allow-root user update admin --user_pass=password
 
 Open the login page
 [localhost:8000/wp/wp-login.php](http://localhost:8000/wp/wp-login.php). Login

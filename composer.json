@@ -222,7 +222,8 @@
     "wordpress-install-dir": "web/wp"
   },
   "config": {
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "vendor-dir": "lib/vendor"
   },
   "platform": {
     "php": "7.3.10"

@@ -27,7 +27,6 @@ services:
       - "9000"
     volumes:
       - .:/var/www
-      - composer:/var/www/vendor
 
   db:
     image: mysql:5.7
