@@ -70,6 +70,12 @@ environment.
     $ docker-compose exec -T db mysql -u root -pmysql-dev-password datagov \
       < <(gzip --to-stdout --decompress databasedump.sql.gz)
 
+You can also load it to a production environment using [service-connect](https://cloud.gov/docs/services/relational-database/#exporting-a-database).
+Start by running `cf connect-to-service -no-client wordpress wordpress-db`, then in a seperate terminal run
+
+    $ mysql --protocol=TCP --port=${port} --user=${name} --database=${database} --password=${password} \
+        < <(gzip --to-stdout --decompress databasedump.sql.gz)
+
 ### Wordpress CLI
 
 Wordpress cli is installed [via composer](https://make.wordpress.org/cli/handbook/guides/installing/#installing-via-composer)

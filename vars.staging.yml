@@ -1,4 +1,6 @@
 app_name: wordpress
 
+wp_env: staging
+
 routes:
   - route: wordpress-stage-datagov.app.cloud.gov
