@@ -36,7 +36,10 @@ if (file_exists($env_config)) {
 /**
  * AWS s3 offload plugin setting
  */
-define('AWS_USE_EC2_IAM_ROLE', true);
+// define('AWS_USE_EC2_IAM_ROLE', true);
+define('AWS_BUCKET', env('AWS_BUCKET'));
+define('AWS_ACCESS_KEY_ID', env('AWS_ACCESS_KEY_ID'));
+define('AWS_SECRET_ACCESS_KEY', env('AWS_SECRET_ACCESS_KEY'));
 
 /**
  * http or https ?

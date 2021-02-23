@@ -1,0 +1,14 @@
+{
+    "WEBDIR": "web",
+    "ADDITIONAL_PREPROCESS_CMDS": "$HOME/bootstrap.sh",
+    "PHP_EXTENSIONS": [
+        "mysqli",
+        "openssl",
+        "mbstring",
+        "gd",
+        "zip",
+        "curl",
+        "sockets",
+        "zlib"
+    ]
+}

@@ -1,0 +1,15 @@
+---
+# To apply this manifest: cf push --vars-file vars.yml
+applications:
+  - name: ((app_name))
+    memory: 128M
+    disk_quota: 1G
+    path: .
+    routes: ((routes))
+    buildpack: php_buildpack
+    services:
+      - ((app_name))-db
+      - ((app_name))-s3
+      - ((app_name))-secrets
+    env:
+      WP_ENV: ((wp_env))

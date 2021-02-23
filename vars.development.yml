@@ -1,0 +1,6 @@
+app_name: wordpress
+
+wp_env: development
+
+routes:
+  - route: wordpress-dev-datagov.app.cloud.gov

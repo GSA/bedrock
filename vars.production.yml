@@ -1,0 +1,6 @@
+app_name: wordpress
+
+wp_env: production
+
+routes:
+  - route: wordpress-prod-datagov.app.cloud.gov
