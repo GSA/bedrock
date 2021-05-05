@@ -37,7 +37,7 @@ workflows:
             - build
           filters:
             branches:
-              only: master
+              only: fcs
 
   weekly:
     triggers:
@@ -46,6 +46,6 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - fcs
     jobs:
       - build
