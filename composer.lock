@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd1eb05d7b888782d65c06ad8e0c7a78",
+    "content-hash": "1d21c5c00ad10f04b81052a70551e419",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.178.5",
+            "version": "3.181.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "5a268a20272c0c9171570ed57f68b629e966deab"
+                "reference": "ca4839367aa57de005d52593081eab777b87a6b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5a268a20272c0c9171570ed57f68b629e966deab",
-                "reference": "5a268a20272c0c9171570ed57f68b629e966deab",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ca4839367aa57de005d52593081eab777b87a6b0",
+                "reference": "ca4839367aa57de005d52593081eab777b87a6b0",
                 "shasum": ""
             },
             "require": {
@@ -92,22 +92,22 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.178.5"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.181.2"
             },
-            "time": "2021-04-15T18:12:46+00:00"
+            "time": "2021-05-14T18:16:31+00:00"
         },
         {
             "name": "composer/installers",
-            "version": "v1.10.0",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "1a0357fccad9d1cc1ea0c9a05b8847fbccccb78d"
+                "reference": "ae03311f45dfe194412081526be2e003960df74b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/1a0357fccad9d1cc1ea0c9a05b8847fbccccb78d",
-                "reference": "1a0357fccad9d1cc1ea0c9a05b8847fbccccb78d",
+                "url": "https://api.github.com/repos/composer/installers/zipball/ae03311f45dfe194412081526be2e003960df74b",
+                "reference": "ae03311f45dfe194412081526be2e003960df74b",
                 "shasum": ""
             },
             "require": {
@@ -201,6 +201,7 @@
                 "majima",
                 "mako",
                 "mediawiki",
+                "miaoxing",
                 "modulework",
                 "modx",
                 "moodle",
@@ -218,6 +219,7 @@
                 "sydes",
                 "sylius",
                 "symfony",
+                "tastyigniter",
                 "typo3",
                 "wordpress",
                 "yawik",
@@ -226,7 +228,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/installers/issues",
-                "source": "https://github.com/composer/installers/tree/v1.10.0"
+                "source": "https://github.com/composer/installers/tree/v1.11.0"
             },
             "funding": [
                 {
@@ -242,7 +244,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-14T11:07:16+00:00"
+            "time": "2021-04-28T06:42:17+00:00"
         },
         {
             "name": "gsa/arcgis-map",
@@ -634,16 +636,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.8.1",
+            "version": "1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1"
+                "reference": "dc960a912984efb74d0a90222870c72c87f10c91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/35ea11d335fd638b5882ff1725228b3d35496ab1",
-                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/dc960a912984efb74d0a90222870c72c87f10c91",
+                "reference": "dc960a912984efb74d0a90222870c72c87f10c91",
                 "shasum": ""
             },
             "require": {
@@ -703,26 +705,26 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/1.8.1"
+                "source": "https://github.com/guzzle/psr7/tree/1.8.2"
             },
-            "time": "2021-03-21T16:25:00+00:00"
+            "time": "2021-04-26T09:17:50+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "5.5.4",
+            "version": "5.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "af7b3b47302fdc01d1f144cd9fbffaffa07c6f54"
+                "reference": "9ccb9d0916d1868b28b3b47d90f1b5f6aee2f79a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/af7b3b47302fdc01d1f144cd9fbffaffa07c6f54",
-                "reference": "af7b3b47302fdc01d1f144cd9fbffaffa07c6f54",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/9ccb9d0916d1868b28b3b47d90f1b5f6aee2f79a",
+                "reference": "9ccb9d0916d1868b28b3b47d90f1b5f6aee2f79a",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core": "5.5.4",
+                "johnpbloch/wordpress-core": "5.5.5",
                 "johnpbloch/wordpress-core-installer": "^1.0 || ^2.0",
                 "php": ">=5.6.20"
             },
@@ -751,20 +753,20 @@
                 "source": "http://core.trac.wordpress.org/browser",
                 "wiki": "http://codex.wordpress.org/"
             },
-            "time": "2021-04-15T02:15:39+00:00"
+            "time": "2021-05-13T00:40:11+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "5.5.4",
+            "version": "5.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "12c3f74ea352f43ea7d6055d2e9bb0312a776b26"
+                "reference": "16c538c797fd91298e5c38f4813e9e4030b2e166"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/12c3f74ea352f43ea7d6055d2e9bb0312a776b26",
-                "reference": "12c3f74ea352f43ea7d6055d2e9bb0312a776b26",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/16c538c797fd91298e5c38f4813e9e4030b2e166",
+                "reference": "16c538c797fd91298e5c38f4813e9e4030b2e166",
                 "shasum": ""
             },
             "require": {
@@ -772,7 +774,7 @@
                 "php": ">=5.6.20"
             },
             "provide": {
-                "wordpress/core-implementation": "5.5.4"
+                "wordpress/core-implementation": "5.5.5"
             },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
@@ -799,7 +801,7 @@
                 "source": "https://core.trac.wordpress.org/browser",
                 "wiki": "https://codex.wordpress.org/"
             },
-            "time": "2021-04-15T02:15:36+00:00"
+            "time": "2021-05-13T00:40:07+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -1206,16 +1208,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.1.3",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc"
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/0f73288fd15629204f9d42b7055f72dacbe811fc",
-                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
                 "shasum": ""
             },
             "require": {
@@ -1239,7 +1241,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interface for logging libraries",
@@ -1250,9 +1252,9 @@
                 "psr-3"
             ],
             "support": {
-                "source": "https://github.com/php-fig/log/tree/1.1.3"
+                "source": "https://github.com/php-fig/log/tree/1.1.4"
             },
-            "time": "2020-03-23T09:12:05+00:00"
+            "time": "2021-05-03T11:20:27+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -1678,15 +1680,15 @@
         },
         {
             "name": "wpackagist-plugin/aryo-activity-log",
-            "version": "2.6.1",
+            "version": "2.7.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/aryo-activity-log/",
-                "reference": "tags/2.6.1"
+                "reference": "tags/2.7.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/aryo-activity-log.2.6.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/aryo-activity-log.2.7.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1768,15 +1770,15 @@
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
-            "version": "5.4",
+            "version": "5.4.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/contact-form-7/",
-                "reference": "tags/5.4"
+                "reference": "tags/5.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.4.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1822,7 +1824,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/export-all-urls.zip?timestamp=1613922713"
+                "url": "https://downloads.wordpress.org/plugin/export-all-urls.zip?timestamp=1619629211"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1976,15 +1978,15 @@
         },
         {
             "name": "wpackagist-plugin/the-events-calendar",
-            "version": "5.5.0.1",
+            "version": "5.6.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/the-events-calendar/",
-                "reference": "tags/5.5.0.1"
+                "reference": "tags/5.6.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/the-events-calendar.5.5.0.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/the-events-calendar.5.6.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2030,15 +2032,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "16.1.1",
+            "version": "16.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/16.1.1"
+                "reference": "tags/16.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.16.1.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.16.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -3738,15 +3740,15 @@
         },
         {
             "name": "wpackagist-plugin/query-monitor",
-            "version": "3.6.7",
+            "version": "3.7.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/query-monitor/",
-                "reference": "tags/3.6.7"
+                "reference": "tags/3.7.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.6.7.zip"
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.7.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
