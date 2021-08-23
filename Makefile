@@ -1,5 +1,7 @@
 up:
 	docker-compose up -d
+down:
+	docker-compose down
 build:
 	docker-compose build
 update:
@@ -7,10 +9,9 @@ update:
 clean:
 	docker-compose down -v
 	rm -rf web/app/mu-plugins/*/ web/app/plugins/* web/app/uploads/* web/app/themes web/wp vendor
-
 setup:
 	docker-compose run --rm app composer install --no-dev
-	sleep 10
+	sleep 30
 	docker-compose run --rm app wp core install --url=http://localhost:8000 --title=Data.gov --admin_user=admin --admin_email=admin@example.com --allow-root
 	docker-compose run --rm app wp plugin activate --all --allow-root
 	docker-compose run --rm app wp theme activate roots-nextdatagov --allow-root
