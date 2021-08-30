@@ -31,7 +31,6 @@
     "wpackagist-plugin/google-analyticator": "*",
     "wpackagist-plugin/m-wp-popup": "*",
     "wpackagist-plugin/no-category-base-wpml": "*",
-    "wpackagist-plugin/plugin-vulnerabilities": "*",
     "wpackagist-plugin/posts-in-page": "*",
     "wpackagist-plugin/redirection": "*",
     "wpackagist-plugin/simple-tooltips": "*",
