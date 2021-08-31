@@ -8,6 +8,7 @@
   },
   "require": {
     "php": ">=7.3",
+    "cweagans/composer-patches": "~1.0",
     "composer/installers": "^1.5",
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "~5.5.1",
@@ -207,6 +208,11 @@
   ],
   "minimum-stability": "stable",
   "extra": {
+    "patches": {
+      "wpackagist-plugin/baw-login-logout-menu": {
+        "Patch ancient BAW plugin": "./patches/baw.patch.txt"
+      }
+    },
     "installer-paths": {
       "web/app/mu-plugins/{$name}/": [
         "type:wordpress-muplugin"
