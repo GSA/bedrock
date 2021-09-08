@@ -1,0 +1,11 @@
+--- web/app/plugins/m-wp-popup/includes/classes/wpp_settings_orig.php	2021-09-07 20:59:58.450000000 -0700
++++ web/app/plugins/m-wp-popup/includes/classes/wpp_settings.php	2021-09-07 21:01:21.839021300 -0700
+@@ -38,7 +38,7 @@
+ 		$capability = POPUP_PLUGIN_CAPABILITY;
+ 		$menu_slug = 'edit.php?post_type=' . POPUP_PLUGIN_POPUP_POST_TYPE;
+ 
+-		add_object_page( $page_title, $menu_title, $capability,
++		add_menu_page( $page_title, $menu_title, $capability,
+ 			$menu_slug );
+ 
+ 		//Add the 'WP Popup Settings' page to settings dashboard menu

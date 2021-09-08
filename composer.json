@@ -211,6 +211,15 @@
     "patches": {
       "wpackagist-plugin/baw-login-logout-menu": {
         "Patch ancient BAW plugin": "./patches/baw.patch.txt"
+      },
+      "wpackagist-plugin/m-wp-popup": {
+        "Patch ancient m-wp-popup plugin": "./patches/m-wp-popup.patch.txt"
+      },
+      "gsa/datagov-custom": {
+        "Patch ancient datagov-custom plugin": "./patches/datagov-custom.patch.txt"
+      },
+      "gsa/data.gov": {
+        "Patch ancient data.gov theme": "./patches/roots-nextdatagov.patch.txt"
       }
     },
     "installer-paths": {
