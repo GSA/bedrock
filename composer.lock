@@ -359,7 +359,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GSA/data.gov",
-                "reference": "f4bc48e341921a1e321db30343b65bd53ac5f040"
+                "reference": "9e3deb00556953f492ed59c79a655a8705da6301"
             },
             "default-branch": true,
             "type": "wordpress-theme",
