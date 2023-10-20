@@ -8,12 +8,14 @@
   },
   "require": {
     "php": ">=7.3",
+    "cweagans/composer-patches": "~1.0",
     "composer/installers": "^1.5",
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "~5.5.1",
     "oscarotero/env": "^1.0",
     "symfony/yaml": "^3.4.13",
     "phpdocumentor/reflection-common": "^1.0.1",
+    "wp-cli/wp-cli-bundle": "*",
     "wpackagist-plugin/advanced-custom-fields": "*",
     "wpackagist-plugin/akismet": "*",
     "wpackagist-plugin/amazon-s3-and-cloudfront": "*",
@@ -30,7 +32,6 @@
     "wpackagist-plugin/google-analyticator": "*",
     "wpackagist-plugin/m-wp-popup": "*",
     "wpackagist-plugin/no-category-base-wpml": "*",
-    "wpackagist-plugin/plugin-vulnerabilities": "*",
     "wpackagist-plugin/posts-in-page": "*",
     "wpackagist-plugin/redirection": "*",
     "wpackagist-plugin/simple-tooltips": "*",
@@ -207,6 +208,20 @@
   ],
   "minimum-stability": "stable",
   "extra": {
+    "patches": {
+      "wpackagist-plugin/baw-login-logout-menu": {
+        "Patch ancient BAW plugin": "./patches/baw.patch.txt"
+      },
+      "wpackagist-plugin/m-wp-popup": {
+        "Patch ancient m-wp-popup plugin": "./patches/m-wp-popup.patch.txt"
+      },
+      "gsa/datagov-custom": {
+        "Patch ancient datagov-custom plugin": "./patches/datagov-custom.patch.txt"
+      },
+      "gsa/data.gov": {
+        "Patch ancient data.gov theme": "./patches/roots-nextdatagov.patch.txt"
+      }
+    },
     "installer-paths": {
       "web/app/mu-plugins/{$name}/": [
         "type:wordpress-muplugin"

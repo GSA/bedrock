@@ -19,10 +19,6 @@ RUN docker-php-ext-install mysqli
 COPY docker/install-composer.sh /tmp/
 RUN /tmp/install-composer.sh
 
-# Install wp cli
-RUN composer global require wp-cli/wp-cli-bundle \
-  && ln -s ~/.composer/vendor/bin/wp /usr/local/bin/wp
-
 # Install php dependencies
 COPY composer.json $WWW_DIR
 COPY composer.lock $WWW_DIR
@@ -30,5 +26,8 @@ COPY composer.lock $WWW_DIR
 # checkout for outdated packages. See
 # https://github.com/GSA/datagov-deploy/issues/612#issuecomment-508871678
 RUN cd $WWW_DIR && COMPOSER_PROCESS_TIMEOUT=600 composer install --no-dev
+
+# Make the wp CLI available
+RUN ln -s /var/www/vendor/wp-cli/wp-cli/bin/wp /usr/bin/wp
 
 WORKDIR $WWW_DIR

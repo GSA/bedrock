@@ -1,0 +1,33 @@
+--- web/app/plugins/datagov-custom/datagov-custom-orig.php	2021-09-07 21:12:48.255000000 -0700
++++ web/app/plugins/datagov-custom/datagov-custom.php	2021-09-07 21:13:44.169021300 -0700
+@@ -644,18 +644,19 @@
+  */
+ function datagov_custom_js()
+ {
+-    // load js only on admin pages
+-    if (is_admin()) {
+-        wp_register_script('datagov_custom_misc_js', plugins_url('/datagov-custom-misc.js', __FILE__), array('jquery'));
+-        wp_enqueue_script('datagov_custom_misc_js');
+-
+-        wp_deregister_script('jquery');
+-        wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js", false, '3.1.0', true);
+-        wp_enqueue_script('jquery');
+-
+-//        wp_register_script('clipboard', ("https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"), false, '1.5.12', false);
+-//        wp_enqueue_script('clipboard');
++    if ( is_admin() ) {
++        $hook = 'admin_enqueue_scripts';
++    } elseif ( 'wp-login.php' === $GLOBALS['pagenow'] ) {
++        $hook = 'login_enqueue_scripts';
++    } else {
++        $hook = 'wp_enqueue_scripts';
+     }
++
++    add_action( $hook, function() {
++        wp_deregister_script( 'jquery' );
++        wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js', array(), null, false );
++        wp_enqueue_script( 'jquery');
++    } );
+ }
+ 
+ add_action('admin_init', 'datagov_custom_js');

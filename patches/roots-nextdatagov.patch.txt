@@ -1,0 +1,19 @@
+--- web/app/themes/roots-nextdatagov/lib/cleanup-orig.php	2021-09-07 21:23:57.404000000 -0700
++++ web/app/themes/roots-nextdatagov/lib/cleanup.php	2021-09-07 21:25:58.009021300 -0700
+@@ -96,10 +96,12 @@
+  * Clean up output of stylesheet <link> tags
+  */
+ function roots_clean_style_tag($input) {
+-  preg_match_all("!<link rel='stylesheet'\s?(id='[^']+')?\s+href='(.*)' type='text/css' media='(.*)' />!", $input, $matches);
+-  // Only display media if it is meaningful
+-  $media = $matches[3][0] !== '' && $matches[3][0] !== 'all' ? ' media="' . $matches[3][0] . '"' : '';
+-  return '<link rel="stylesheet" href="' . $matches[2][0] . '"' . $media . '>' . "\n";
++  if (preg_match_all("!<link rel='stylesheet'\s?(id='[^']+')?\s+href='(.*)' type='text/css' media='(.*)' />!", $input, $matches)) {
++    // Only display media if it is meaningful
++    $media = isset($matches[3][0]) && $matches[3][0] !== '' && $matches[3][0] !== 'all' ? ' media="' . $matches[3][0] . '"' : '';
++    return '<link rel="stylesheet" href="' . $matches[2][0] . '"' . $media . '>' . "\n";
++  }
++  return $input;
+ }
+ add_filter('style_loader_tag', 'roots_clean_style_tag');
+ 
